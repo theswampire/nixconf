@@ -51,6 +51,7 @@
         enable = true;
         package = self.packages.${pkgs.stdenv.hostPlatform.system}.myTmux;
       };
+      environment.systemPackages = with pkgs; [ btop ];
 
       # Localization
       time.timeZone = "Europe/Zurich";
