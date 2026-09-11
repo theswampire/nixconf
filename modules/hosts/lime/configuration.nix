@@ -8,6 +8,7 @@
       self.nixosModules.kai
       self.nixosModules.neovim
       self.nixosModules.server
+      self.nixosModules.media
     ];
 
     nix.settings.experimental-features = [
