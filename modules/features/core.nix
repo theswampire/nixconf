@@ -40,6 +40,12 @@
         interactiveShellInit = ''
           # Autocomplete parent dirs
           zstyle ':completion:*' special-dirs true
+
+          # vi mode
+          bindkey -v
+          # restore reverse search
+          bindkey ^R history-incremental-search-backward
+          bindkey ^S history-incremental-search-forward
         '';
       };
       programs.zoxide = {
