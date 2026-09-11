@@ -4,22 +4,18 @@
   ...
 }:
 {
-  flake.nixosModules.neovim =
-    {
-      pkgs,
-      lib,
-      ...
-    }:
-    {
-      environment.systemPackages = [ self.packages.${pkgs.stdenv.hostPlatform.system}.myNeovim ];
-    };
+  flake.nixosModules.neovim = { pkgs, ... }: {
+    environment.systemPackages = with pkgs; [
+      self.packages.${stdenv.hostPlatform.system}.myNeovim
+      wl-clipboard
+    ];
+  };
 
   perSystem =
     {
       config,
       lib,
       pkgs,
-      self',
       ...
     }:
     {
