@@ -262,17 +262,17 @@ hl.bind(mainMod .. " + K", hl.dsp.focus({ direction = "up" }))
 hl.bind(mainMod .. " + J", hl.dsp.focus({ direction = "down" }))
 
 -- Move window with mainMod + SHIT + HJKL
-hl.bind(mainMod .. " + SHIFT + H", hl.dsp.window.move({ follows = false, direction = "left" }))
-hl.bind(mainMod .. " + SHIFT + J", hl.dsp.window.move({ follows = false, direction = "down" }))
-hl.bind(mainMod .. " + SHIFT + K", hl.dsp.window.move({ follows = false, direction = "up" }))
-hl.bind(mainMod .. " + SHIFT + L", hl.dsp.window.move({ follows = false, direction = "right" }))
+hl.bind(mainMod .. " + SHIFT + H", hl.dsp.window.move({ direction = "left" }))
+hl.bind(mainMod .. " + SHIFT + J", hl.dsp.window.move({ direction = "down" }))
+hl.bind(mainMod .. " + SHIFT + K", hl.dsp.window.move({ direction = "up" }))
+hl.bind(mainMod .. " + SHIFT + L", hl.dsp.window.move({ direction = "right" }))
 
 -- Switch workspaces with mainMod + [0-9]
 -- Move active window to a workspace with mainMod + SHIFT + [0-9]
 for i = 1, 10 do
     local key = i % 10 -- 10 maps to key 0
     hl.bind(mainMod .. " + " .. key, hl.dsp.focus({ workspace = i }))
-    hl.bind(mainMod .. " + SHIFT + " .. key, hl.dsp.window.move({ workspace = i }))
+    hl.bind(mainMod .. " + SHIFT + " .. key, hl.dsp.window.move({ workspace = i, follow = false }))
 end
 
 -- Example special workspace (scratchpad)
