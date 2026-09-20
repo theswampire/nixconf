@@ -7,6 +7,11 @@
 
       cargo
       rustc
+      gcc
+
+      z3
+      racket-minimal
+      cbmc
     ];
 
     environment.shellAliases = {
