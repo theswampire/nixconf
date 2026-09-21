@@ -10,8 +10,8 @@
       gcc
 
       z3
-      racket-minimal
       cbmc
+      racket
     ];
 
     environment.shellAliases = {
