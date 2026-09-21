@@ -16,6 +16,12 @@
         package = self.packages.${pkgs.stdenv.hostPlatform.system}.myHyprland;
         xwayland.enable = true;
       };
+      
+      environment.systemPackages = with pkgs; [
+
+        # screenshot
+        hyprshot
+      ];
     };
 
   perSystem =
