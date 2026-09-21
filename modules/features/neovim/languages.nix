@@ -7,7 +7,7 @@
           inlayHints.enable = true;
 
           mappings.format = "<leader>F";
-          mappings.goToDefinition = "<leader>gd";
+          mappings.goToDefinition = "gd";
           mappings.goToDeclaration = "<leader>gD";
           mappings.listReferences = "<leader>gr";
           mappings.listImplementations = "<leader>gI";
