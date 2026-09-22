@@ -15,6 +15,8 @@
 
       # for drag&drop in yazi
       dragon-drop
+
+      mpv
     ];
 
     # wifi login portal dedicated browser
