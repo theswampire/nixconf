@@ -5,7 +5,7 @@
 
       users.kai = {
         isNormalUser = true;
-        description = "dä chef";
+        description = "Kai";
         extraGroups = [
           "networkmanager"
           "wheel"
