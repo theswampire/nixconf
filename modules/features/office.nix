@@ -8,6 +8,7 @@
       pdfarranger
       pympress
       thunderbird
+      typst
     ];
   };
 }
