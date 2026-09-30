@@ -27,7 +27,12 @@
           nix.enable = true;
           lua.enable = true;
           go.enable = true;
-
+          typst = {
+            enable = true;
+            extensions = {
+              typst-concealer.enable = true;
+            };
+          };
         };
       }
     ];
