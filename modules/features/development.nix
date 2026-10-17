@@ -17,5 +17,13 @@
     environment.shellAliases = {
       gs = "git status";
     };
+
+    virtualisation.docker = {
+      enable = true;
+      autoPrune = {
+        enable = true;
+        allVolumes.enable = true;
+      };
+    };
   };
 }
