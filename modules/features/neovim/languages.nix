@@ -24,15 +24,19 @@
           enableFormat = true;
           enableExtraDiagnostics = true;
 
-          nix.enable = true;
-          lua.enable = true;
+          clang.enable = true;
           go.enable = true;
+          lua.enable = true;
+          nix.enable = true;
+          python.enable = true;
+          typescript.enable = true;
           typst = {
             enable = true;
             extensions = {
               typst-concealer.enable = true;
             };
           };
+          vue.enable = true;
         };
       }
     ];
