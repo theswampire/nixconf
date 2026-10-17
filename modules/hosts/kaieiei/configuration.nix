@@ -6,6 +6,7 @@
 
       self.nixosModules.core
       self.nixosModules.desktop
+      self.nixosModules.power
       self.nixosModules.hyprland
       self.nixosModules.kai
       self.nixosModules.neovim
