@@ -9,6 +9,14 @@
       rustc
       gcc
 
+      go
+      go-task
+      air
+      sqlc
+
+      pnpm
+      nodejs
+
       z3
       cbmc
       racket
