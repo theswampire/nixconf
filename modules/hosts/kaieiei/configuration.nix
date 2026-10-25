@@ -31,6 +31,11 @@
       vim
     ];
 
+    services.aspm_powerswitch = {
+      enable = true;
+      mode = "powersupersave";
+    };
+
     system.stateVersion = "26.11"; # Did you read the comment?
   };
 }
