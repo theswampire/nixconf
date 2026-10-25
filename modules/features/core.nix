@@ -136,6 +136,9 @@
           # Set true color
           set-option -sa terminal-overrides ",xterm*:Tc"
 
+          # Renumber window after closing
+          set-option -g renumber-windows on
+
           # navigation
           bind h select-pane -L
           bind j select-pane -D
