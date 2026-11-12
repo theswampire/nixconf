@@ -46,7 +46,7 @@ local browser     = "zen-twilight"
 -- Or execute your favorite apps at launch like this:
 --
 hl.on("hyprland.start", function()
-    hl.exec_cmd("noctalia-shell")
+    hl.exec_cmd("noctalia")
 end)
 
 
@@ -238,7 +238,7 @@ hl.device({
 ---------------------
 
 local mainMod = "SUPER" -- Sets "Windows" key as main modifier
-local ipc = "noctalia-shell ipc call "
+local ipc = "noctalia msg "
 
 -- Example binds, see https://wiki.hypr.land/Configuring/Basics/Binds/ for more
 hl.bind(mainMod .. " + Q", hl.dsp.exec_cmd(terminal))
@@ -249,9 +249,9 @@ hl.bind(mainMod .. " + M",
 hl.bind(mainMod .. " + E", hl.dsp.exec_cmd(fileManager))
 hl.bind(mainMod .. " + B", hl.dsp.exec_cmd(browser))
 hl.bind(mainMod .. " + V", hl.dsp.window.float({ action = "toggle" }))
-hl.bind(mainMod .. " + S", hl.dsp.exec_cmd(ipc .. "launcher toggle"))
+hl.bind(mainMod .. " + S", hl.dsp.exec_cmd(ipc .. "panel-toggle launcher"))
 hl.bind(mainMod .. " + P", hl.dsp.window.pseudo())
-hl.bind(mainMod .. " + SHIFT + P", hl.dsp.exec_cmd(ipc .. "lockScreen lock"))
+hl.bind(mainMod .. " + SHIFT + P", hl.dsp.exec_cmd(ipc .. "session lock"))
 hl.bind(mainMod .. " + T", hl.dsp.layout("togglesplit")) -- dwindle only
 hl.bind(mainMod .. " + F", hl.dsp.window.fullscreen({ action = "toggle" }))
 hl.bind(mainMod .. " + SHIFT + S", hl.dsp.exec_cmd("hyprshot -m region --clipboard-only"))
