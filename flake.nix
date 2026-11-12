@@ -10,7 +10,8 @@
     import-tree.url = "github:vic/import-tree";
 
     # until this is merged in, then "github:BirdeeHub/nix-wrapper-modules"
-    wrapper-modules.url = "github:jonas-elhs/nix-wrapper-modules/push-kpmnkpssnozs";
+    #wrapper-modules.url = "github:jonas-elhs/nix-wrapper-modules/push-kpmnkpssnozs";
+    wrapper-modules.url = "github:nix-community/nix-wrapper-modules";
 
     monique.url = "github:ToRvaLDZ/monique";
 
