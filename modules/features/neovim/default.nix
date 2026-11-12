@@ -5,10 +5,15 @@
 }:
 {
   flake.nixosModules.neovim = { pkgs, ... }: {
-    environment.systemPackages = with pkgs; [
-      self.packages.${stdenv.hostPlatform.system}.myNeovim
-      wl-clipboard
-    ];
+    environment = {
+      systemPackages = with pkgs; [
+        self.packages.${stdenv.hostPlatform.system}.myNeovim
+        wl-clipboard
+      ];
+
+      variables.EDITOR = "nvim";
+      variables.VISUAL = "nvim";
+    };
   };
 
   perSystem =
