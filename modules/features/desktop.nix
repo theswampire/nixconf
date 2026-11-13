@@ -16,7 +16,7 @@
       # for drag&drop in yazi
       dragon-drop
 
-      mpv
+      self.packages.${pkgs.stdenv.hostPlatform.system}.myMPV
     ];
 
     # wifi login portal dedicated browser
@@ -80,6 +80,14 @@
             "ctrl+.=increase_font_size:1"
           ];
         };
+      };
+
+      # quick workaround for incorrect colorspace in fullscreen
+      packages.myMPV = inputs.wrapper-modules.wrappers.mpv.wrap {
+        inherit pkgs;
+        "mpv.conf".content = ''
+          target-colorspace-hint=no
+        '';
       };
     };
 }
