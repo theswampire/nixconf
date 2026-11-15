@@ -607,6 +607,7 @@ showKeybinds = true
     keybind = "7"
 
 [shell.panel]
+control_center_position = "top_right"
 transparency_mode = "glass"
 
 [systemMonitor]
