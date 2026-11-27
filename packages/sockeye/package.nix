@@ -10,14 +10,12 @@ rustPlatform.buildRustPackage {
   src = fetchFromGitLab {
     owner = "project-opensockeye";
     repo = "sockeye";
-    rev = "6fc84958ccb425e57edefc7f28353b59e9e87897";
-    hash = "sha256-uUeSN8AUqc4weyoZ2VgOE3j+yNaXiNbMKj9l9uFM2e0=";
+    rev = "52e5b9ba0cd0443fd63fcaa1705c27318d34ce03";
+    hash = "sha256-DCem15RSzohf1qxMQqgUkNtAY1nTvtMHhtFAAukUP+8=";
     domain = "gitlab.inf.ethz.ch";
   };
 
   nativeBuildInputs = [git];
-
-  patches = [./0001-lsp-very-adhoc-textDocument-hover-support.patch];
 
   cargoHash = "sha256-LWvVbWm+hW0huIYPGbQVsGYAQrgmc/luBfZOfhtQzJE=";
   doCheck = false;
